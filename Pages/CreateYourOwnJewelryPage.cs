@@ -4,8 +4,10 @@ namespace DemoWebShopTests.Pages
 {
     public class CreateYourOwnJewelryPage : BasePage
     {
-        public CreateYourOwnJewelryPage(IWebDriver driver, string baseUrl) : base(driver, baseUrl) { }
+        public CreateYourOwnJewelryPage(IWebDriver driver, string baseUrl) : base(driver, baseUrl) 
+        {
 
+        }
         public void SelectMaterial(string material)
         {
             driver.FindElement(By.Id("product_attribute_71_9_15")).SendKeys(material);
@@ -16,9 +18,9 @@ namespace DemoWebShopTests.Pages
             driver.FindElement(By.Id("product_attribute_71_10_16")).SendKeys(length);
         }
 
-        public void SelectPendant(string pendant)
+        public void SelectPendant()
         {
-            driver.FindElement(By.Id($"product_attribute_71_11_17_{pendant}")).Click();
+            driver.FindElement(By.Id($"product_attribute_71_11_17_49")).Click(); 
         }
 
         public void IncreaseQuantity(int quantity)

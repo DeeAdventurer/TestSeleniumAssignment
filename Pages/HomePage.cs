@@ -4,7 +4,10 @@ namespace DemoWebShopTests.Pages
 {
     public class HomePage : BasePage
     {
-        public HomePage(IWebDriver driver, string baseUrl) : base(driver, baseUrl) { }
+        public HomePage(IWebDriver driver, string baseUrl) : base(driver, baseUrl)
+        { 
+        
+        }
 
         public void GoTo()
         {
@@ -18,7 +21,7 @@ namespace DemoWebShopTests.Pages
 
         public void ClickLogin()
         {
-            driver.FindElement(By.LinkText("Log in")).Click();
+            driver.FindElement(By.XPath("/ html / body / div[4] / div[1] / div[1] / div[2] / div[1] / ul / li[2] / a")).Click();
         }
 
         public void ClickJewelryCategory()
